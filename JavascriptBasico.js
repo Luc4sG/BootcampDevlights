@@ -277,5 +277,164 @@ let myData1 = myArray4[2][1];
 
 // Setup
 const myArray5 = [["John", 23], ["cat", 2]];
-
 myArray5.push(["dog",3])
+
+//Ejercicio 43 - Manipulate Arrays With pop()
+
+const removedFromMyArray = myArray5.pop();
+
+//Ejercicio 44 - Manipulate Arrays With shift()
+
+const removedFromMyArray1 = myArray5.shift();
+
+//Ejercicio 45 - Manipulate Arrays With unshift()
+
+myArray5.unshift(["Paul",35]);
+
+//Ejercicio 46 - Shopping List
+
+const myList = [["arroz",5],["leche",3],["huevos",12],["pan",2],["queso",1]];
+
+//Ejercicio 47 - Write Reusable JavaScript with Functions
+
+function reusableFunction() {
+    console.log("Hi World");
+};
+reusableFunction();
+
+//Ejercicio 48 - Passing Values to Functions with Arguments
+
+function functionWithArgs(a, b) {
+    console.log(a + b);
+}
+functionWithArgs(3, 6); 
+
+//Ejercicio 49 - Return a Value from a Function with Return
+
+function timesFive(num) {
+    return num * 5;
+}
+
+//Ejercicio 50 - Global Scope and Functions 
+
+const myGlobal = 10;
+function fun1() {
+     oopsGlobal = 5;  // las variables sin la keyword se declaran siempre de manera global
+}
+
+//Ejercicio 51 - Local Scope and Functions
+
+function myLocalScope() {
+    const myVar = 5
+  
+    console.log('inside myLocalScope', myVar);
+  }
+  myLocalScope();
+  console.log('outside myLocalScope', myVar); // tira error debido a que myVar no esta definida d emanera global
+
+//Ejercicio 52 - Global vs. Local Scope in Functions
+
+const outerWear = "T-Shirt";
+function myOutfit() {
+    const outerWear = "sweater";
+  return outerWear;
+};
+myOutfit();
+
+//-----------------
+/*
+Hoisiting es el comportamiento de mover las declaraciones al inicio del scope actual
+This.variable hace referencia al contexto actual
+*/
+//-----------------
+
+//Ejercicio 53 - Understanding Undefined Value returned from a Function
+
+// Setup
+let sum1 = 0;
+function addThree() {
+  sum1 = sum1 + 3;
+};
+
+function addFive() {
+    sum1 = sum1 + 5;
+};
+addThree();
+addFive();
+
+//Ejercicio 54 - Assignment with a Returned Value
+
+// Setup
+let processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+processed = processArg(7);
+
+//Ejercicio 55 - Stand in Line
+
+function nextInLine(arr,item) {
+    arr.push(item);
+    return arr.shift();
+}
+
+// Ejericio 56 - Understanding Boolean Values
+
+function welcomeToBooleans() {
+    return true;
+}
+
+//Ejercicio 57 - Use Conditional Logic with If Statements
+
+function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue) {
+        return "Yes, that was true";
+    }
+    return "No, that was false";
+}
+
+//Ejercicio 58 - Comparison with the Equality Operator
+
+function testEqual(val) {
+    if (val==12) {
+      return "Equal";
+    }
+    return "Not Equal";
+  }
+
+//Ejercicio 59 - Comparison with the Strict Equality Operator
+
+function testStrict(val) {
+    if (val===7) { 
+      return "Equal";
+    }
+    return "Not Equal";
+  }
+  
+//Ejercicio 60 - Practice comparing different values
+
+function compareEquality(a, b) {
+    if (a === b) { 
+      return "Equal";
+    }
+    return "Not Equal";
+  }
+
+//Ejercicio 61 - Comparison with the Inequality Operator
+
+function testNotEqual(val) {
+    if (val != 99) {
+      return "Not Equal";
+    }
+    return "Equal";
+  }
+
+//Ejercicio 62 - Comparison with the Strict Inequality Operator
+
+function testStrictNotEqual(val) {
+    if (val !== 17) { 
+      return "Not Equal";
+    }
+    return "Equal";
+  }
