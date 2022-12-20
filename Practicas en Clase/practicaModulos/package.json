@@ -1,0 +1,13 @@
+{
+    "name": "Módulo de ejemplo",
+    "version": "1.0",
+    "author": {
+        "name": "Lucas G",
+        "email": "lks.gauna@gmail.com"
+    },
+    "main" : "index.js",
+    "description": "Módulo de ejemplo",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
